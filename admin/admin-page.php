@@ -17,7 +17,7 @@ function wpmig_get_custom_post_types() {
     $args = array(
         'public'   => false, // Inclui CPTs não públicos
         '_builtin' => false,
-        'show_ui'  => true, // Inclui CPTs que são visíveis no admi
+        'show_ui'  => true, // Inclui CPTs que são visíveis no admin
     );
     $output = 'names'; // 'names' or 'objects'
     $operator = 'and'; // 'and' or 'or'
