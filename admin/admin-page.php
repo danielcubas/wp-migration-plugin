@@ -15,10 +15,11 @@ add_action( 'admin_menu', 'wpmig_add_admin_menu' );
 
 function wpmig_get_custom_post_types() {
     $args = array(
-        'public'   => true,
+        'public'   => false, // Inclui CPTs não públicos
         '_builtin' => false,
+        'show_ui'  => true, // Inclui CPTs que são visíveis no admin
     );
-    $output = 'names'; // names or objects, note names is the default
+    $output = 'names'; // 'names' or 'objects'
     $operator = 'and'; // 'and' or 'or'
     $post_types = get_post_types( $args, $output, $operator );
 
